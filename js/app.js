@@ -67,3 +67,7 @@ function next(){
     count++;
     showQuestion(count)
 }
+
+function activeOption(){
+    
+}
