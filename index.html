@@ -7,40 +7,21 @@
     <title>QUIZ APP</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            width: 100vw;
-            height: 100vh;
+        .options:hover{
+            background-color: darkcyan;
+            color: #fff;
         }
-
-        .header {
-            display: inline-block;
+        .active{
+            background-color: darkcyan;
+            color: #fff;
         }
-
-        .timer {
-            display: inline-block;
+        p:hover{
+            cursor: pointer !important;
         }
-
-        .body {}
     </style>
 </head>
 
 <body onload="showQuestion(0)">
-    <!-- <div class="wrapper">
-        <div class="header">
-            <div id="header">Welcome to Quiz App</div>
-            <span id="timer">02:00</span>
-        </div>
-        <div class="body">
-
-        </div>
-
-
-
-    </div>
- -->
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
@@ -52,12 +33,10 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title pb-3" id="question">Special title treatment</h5>
-                        <p class="card-text options p-2">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <p class="card-text options p-2">With supporting text below as a natural lead-in to additional
-                            content.</p>
-                        <p class="card-text options p-2">With supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text options p-2">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text options p-2" onclick="activeOption(this)"></p>
+                        <p class="card-text options p-2" onclick="activeOption(this)"></p>
+                        <p class="card-text options p-2" onclick="activeOption(this)"></p>
+                        <p class="card-text options p-2" onclick="activeOption(this)"></p>
                     </div>
                     <div class="card-footer text-right bg-success text-white">
                         <a href="#" class="btn btn-dark" id="nextbtn" onclick="next()">Next Question</a>

@@ -61,13 +61,31 @@ function showQuestion(e){
     }
 }
 
-var count = 0;
+var countQuestion = 0;
+var score = 0;
 
 function next(){
-    count++;
-    showQuestion(count)
+    countQuestion++;
+    validate(countQuestion);
+    unactive();
+    showQuestion(countQuestion)
 }
 
-function activeOption(){
-    
+function activeOption(e){
+    unactive()
+    e.classList.add("active")
+}
+
+function unactive(){
+    var active = document.getElementsByClassName("active")
+    for(var i = 0; i < active.length; i++){
+        active[i].classList.remove("active")
+    }
+}
+
+function validate(e){
+    var active = document.getElementsByClassName("active")
+    if(active[0].innerHTML == quizQuestions[e].answer)
+    score++;
+    console.log(score)
 }
